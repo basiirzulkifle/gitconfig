@@ -1,0 +1,31 @@
+[core]
+	editor = \"C:\\Users\\JB12CPU\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	safecrlf = false
+[user]
+	name = SU1_Basiir
+	email = softwareu1@i-smart.com.sg
+[init]
+	defaultBranch = main
+[credential]
+	interactive = always
+[credential "https://gitlab.com"]
+	provider = generic
+[alias]
+	a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+	d = diff
+	co = checkout
+	ci = commit
+	ca = commit -a
+	ps = "!git push origin $(git rev-parse --abrev-ref HEAD)"
+	pl = "
+	st = status
+	br = branch
+	ba = branch -a
+	bm = branch --merged
+	bn = branch --no-merged
+	df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+	hist = "log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)"
+	llog = "log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Cr
+	open = "!hub browse"
+
+
